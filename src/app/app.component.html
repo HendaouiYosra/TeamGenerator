@@ -1,0 +1,54 @@
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Handjet&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Handjet&family=Press+Start+2P&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Handjet&family=Press+Start+2P&family=Share+Tech+Mono&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Handjet&family=Press+Start+2P&family=Quantico:wght@700&family=Rubik+Mono+One&family=Share+Tech+Mono&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="first-interface">
+        <div class="container">
+            <div class="ui card">
+                <h1>Team </h1>
+                <h1>Generator</h1>
+                <ul class="list">
+                    <li *ngFor="let m of members">{{m}}</li>
+
+                </ul>
+                <div class="add-members-container">
+                    <input #inputName type="text" name="" id="memberInput" placeholder="add name" (input)="onInput(inputName.value)" [value]="newMemberName">
+                    <button (click)="addMember()">add</button>
+
+
+                </div>
+                <div class="input-container ">
+                    <input #inputTeamNumber type="text " id="numberInput" placeholder="number of teams " (input)="onInputNumber(inputTeamNumber.value)" [value]="numberOfTeams">
+
+                    <p *ngIf="errorMessageNumber" class="error-message">{{errorMessageNumber}}</p>
+                    <p *ngIf="errorMessage">{{errorMessage}} </p>
+                </div>
+                <div class="button-container">
+                    <a class="button" href="#" (click)="generateTeams()" style="--color:#d764d3;">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span> generate
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="teams-container" id="teams" [hidden]="!showTeams">
+        <div class="background-image">
+            <h1>TEAMS</h1>
+            <div class="lists">
+                <app-team *ngFor="let team of teams;let index=index;" [team]="team " [i]="index"></app-team>
+            </div>
+        </div>
+    </div>
+
+</body>
