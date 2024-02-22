@@ -1,27 +1,16 @@
-# Team
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
+ 
+# Random Team Generator
+You can view the live demo of this project [here](https://guileless-beignet-a6ac58.netlify.app).
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The Random Team Generator is a web application built with Angular that allows users to input a list of names and specify the number of teams they want to create. The application then generates random teams from the provided list of names.
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Input field for entering names
+- Input field for selecting the number of teams
+- Button to generate random teams
+- Display of generated teams
+- Error handling
